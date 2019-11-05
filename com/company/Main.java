@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Scanner;
+import  java.io.FileWriter;
 
 public class Main {
 
@@ -76,11 +77,25 @@ public class Main {
         int indexOfItem = 0;
 
         for (int i = 0 ; i < stockArray.length; i++) {
-            if (code == stockArray[1].GetStockCode()){
+            if (code.equals(stockArray[1].GetStockCode())){
                 indexOfItem = i;
             }
         }
 
         return indexOfItem;
+    }
+
+    static void createStockItem(){
+        System.out.println("What is the stock code of the new item?");
+        String code= input.nextLine();
+        System.out.println("What is the stock name of the new item?");
+        String name = input.nextLine();
+        System.out.println("Please enter a short description of the new item");
+        String description = input.nextLine();
+        System.out.println("Please enter the quantity you have of this stock item");
+        int quantity =  input.nextInt();
+        System.out.println("Please enter the price of the new item excluding VAT");
+        float priceNoVat = (float) input.nextDouble();
+
     }
 }
