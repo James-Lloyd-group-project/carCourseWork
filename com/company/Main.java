@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     static Scanner input = new Scanner(System.in);
+    static StockItem[] stockArray = new StockItem[10];
 
     public static void main(String[] args) {
         System.out.println("Welcome to our car part sale application");
@@ -50,6 +51,10 @@ public class Main {
 
         switch(modeSelection){
             case 1:
+                addStock();
+                break;
+            case 2:
+                modifyStock();
 
         }
 
@@ -57,10 +62,25 @@ public class Main {
     }
 
     static void modifyStock(){
+        System.out.println("Please enter the stock code of the item that you would like to modify");
 
+        String stockCode = input.nextLine();
+        int indexOfStock = findStockCode(stockCode);
     }
 
     static void addStock(){
 
+    }
+
+    static int findStockCode(String code){
+        int indexOfItem = 0;
+
+        for (int i = 0 ; i < stockArray.length; i++) {
+            if (code == stockArray[1].GetStockCode()){
+                indexOfItem = i;
+            }
+        }
+
+        return indexOfItem;
     }
 }
