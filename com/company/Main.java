@@ -5,37 +5,44 @@ public class Main {
 
     static Scanner input = new Scanner(System.in);
     static String modeSelection;
-    static String modeSelected;
+
 
     public static void main(String[] args) {
-	System.out.println("Welcome to our car part sale application");
-	    while(modeSelected==null){
-	        ModeSelection();
+        System.out.println("Welcome to our car part sale application");
+
+        switch (modeSelection()){
+            case 1:
+                salesMode();
+                break;
+            case 2:
+                orderingMode();
+                break;
+            case 3:
+                stockManagement();
+                break;
         }
-	    }
+    }
 
-    public static String ModeSelection(){
+    public static int modeSelection(){
 
-        System.out.println("Enter Sales,buying or updating  stock what you would like to do");
+        System.out.println("Enter one for sales");
+        System.out.println("Enter two for ");
+        System.out.println("Enter three for stock management");
 
-        modeSelection = input.nextLine().toLowerCase();
+        int modeSelected = input.nextInt();
 
-        System.out.println(modeSelection);
+        return modeSelected;
+    }
 
-        if(modeSelection=="sales"){
-            return modeSelection;
-        }
-        else if(modeSelection=="buying"){
-            return modeSelection;
-        }
-        else if(modeSelection=="updating"){
-            return modeSelection;
-        }
-        else{
-            System.out.println("input not recognised by system please try again");
-            return null;
-        }
+    static void salesMode(){
 
+    }
+
+    static void orderingMode(){
+
+    }
+
+    static void stockManagement(){
 
     }
 }
