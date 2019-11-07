@@ -5,12 +5,28 @@ import  java.io.FileWriter;
 public class Main {
 
     static Scanner input = new Scanner(System.in);
-    static StockItem[] stockArray = new StockItem[10];
+    static StockItem[] stockArray = new StockItem[1];
+    static int modeSelected;
 
     public static void main(String[] args) {
         System.out.println("Welcome to our car part sale application");
 
-        switch (modeSelection()){
+        modeSelection();
+    }
+
+    public static void modeSelection(){
+
+        System.out.println("Enter 1 for sales");
+        System.out.println("Enter 2 for ordering stock ");
+        System.out.println("Enter 3 for stock management");
+
+        modeSelected = input.nextInt();
+
+        menuSelection();
+    }
+
+    static void menuSelection(){
+        switch (modeSelected){
             case 1:
                 salesMode();
                 break;
@@ -23,17 +39,6 @@ public class Main {
         }
     }
 
-    public static int modeSelection(){
-
-        System.out.println("Enter 1 for sales");
-        System.out.println("Enter 2 for ordering stock ");
-        System.out.println("Enter 3 for stock management");
-
-        int modeSelected = input.nextInt();
-
-        return modeSelected;
-    }
-
     static void salesMode(){
         int indexOfStock = -1;
 
@@ -42,10 +47,17 @@ public class Main {
         System.out.println("Please enter the stock code of the item that you would like to sell");
         String stockCode = input.nextLine();
 
-        for (int i = 0; i < stockArray.length; i++) {
-            if(stockArray[i].GetStockCode().equals(stockCode)){
+        int itemIndex = findStockCode(stockCode);
+        if(itemIndex==-1){
+            System.out.println("Item not found");
+        }
+        else{
+            System.out.println("Stock item: "+ stockCode+ " found how many would you like to sell?");
 
-            }
+            int saleQuantity = input.nextInt();
+
+            int newQuantity = stockArray[itemIndex].sellItem(saleQuantity);
+            System.out.println("You now have "+ newQuantity+ " of item "+ stockCode+ " in stock");
         }
     }
 
@@ -87,7 +99,7 @@ public class Main {
         int indexOfItem = 0;
 
         for (int i = 0 ; i < stockArray.length; i++) {
-            if (code.equals(stockArray[1].GetStockCode())){
+            if (code.equals(stockArray[i].GetStockCode())){
                 indexOfItem = i;
             }
         }

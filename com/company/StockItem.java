@@ -77,7 +77,7 @@ public void SetStockDescription(String newDescription){
            System.out.println("Unable to sell "+ saleQuantity+" of this item as we do not have enough in stock");
        }
        else{
-           stockQuantity =- saleQuantity;
+           stockQuantity = stockQuantity - saleQuantity;
        }
      }
     else{
