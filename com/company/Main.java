@@ -57,7 +57,7 @@ public class Main {
             int saleQuantity = input.nextInt();
 
             int newQuantity = stockArray[itemIndex].sellItem(saleQuantity);
-            System.out.println("You now have "+ newQuantity+ " of item "+ stockCode+ " in stock");
+            System.out.println("You now have "+ newQuantity+ " of item "+ stockArray[itemIndex]+ " in stock");
         }
     }
 
