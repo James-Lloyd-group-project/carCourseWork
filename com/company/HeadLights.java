@@ -8,8 +8,22 @@ public class HeadLights extends StockItem {
     }
 
     private int brightness;
+    private int colour;
+    private int model;
+
 
     public int getBrightness(){ return brightness;}
 
     public void setBrightness(int newBrightness){ this.brightness = newBrightness;}
+
+    public int getColour(){return colour;}
+
+    public void setColour(int newColour){ this.colour = newColour;}
+
+    public int getShape(){return model;}
+
+    public void setModel(int newModel){ this.model = newModel;}
+
+
+
 }
