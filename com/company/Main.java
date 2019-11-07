@@ -35,7 +35,18 @@ public class Main {
     }
 
     static void salesMode(){
+        int indexOfStock = -1;
+
         System.out.println("Entering sales mode");
+
+        System.out.println("Please enter the stock code of the item that you would like to sell");
+        String stockCode = input.nextLine();
+
+        for (int i = 0; i < stockArray.length; i++) {
+            if(stockArray[i].GetStockCode().equals(stockCode)){
+
+            }
+        }
     }
 
     static void orderingMode(){
@@ -59,7 +70,6 @@ public class Main {
 
         }
 
-
     }
 
     static void modifyStock(){
@@ -70,7 +80,7 @@ public class Main {
     }
 
     static void addStock(){
-
+        createStockItem();
     }
 
     static int findStockCode(String code){
@@ -86,8 +96,11 @@ public class Main {
     }
 
     static void createStockItem(){
+        int itemsOfStock = 0;
+
         System.out.println("What is the stock code of the new item?");
         String code= input.nextLine();
+        code= input.nextLine();
         System.out.println("What is the stock name of the new item?");
         String name = input.nextLine();
         System.out.println("Please enter a short description of the new item");
@@ -96,6 +109,36 @@ public class Main {
         int quantity =  input.nextInt();
         System.out.println("Please enter the price of the new item excluding VAT");
         float priceNoVat = (float) input.nextDouble();
+        while(quantity<0){
+            System.out.println("Please enter a valid quantity");
+            quantity = input.nextInt();
+        }
+
+        stockArray[itemsOfStock] = new StockItem(name,code,quantity,description,priceNoVat);
+        ;
+        System.out.println("stock item: "+ stockArray[itemsOfStock].GetStockCode()+" has been created");
+
+        itemsOfStock++;
+
+        String selection = continueUsingApp();
+        selection = selection.toLowerCase();
+
+        if(selection.equals("y")){
+            System.out.println("Returning to main menu");
+            modeSelection();
+        }
+        else{
+            System.out.println("exiting application");
+        }
 
     }
+
+    static String continueUsingApp(){
+        System.out.println("Would you like to carry on?: Y/N");
+        String selection = input.next();
+        selection.toLowerCase();
+        return selection;
+    }
+
+
 }
