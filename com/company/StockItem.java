@@ -11,6 +11,7 @@ public class StockItem {
     
 private String stockName;
 private String stockCode;
+private String stockSupplier;
 
 private int stockQuantity;
 
@@ -114,6 +115,10 @@ public void SetStockDescription(String newDescription){
   public float getNoVatPrice(){
       return stockPriceNoVat;
 }
+
+  public String getStockSupplier() {return stockSupplier;}
+
+  public void setStockSupplier(String newStockSupplier){ this.stockSupplier = newStockSupplier;}
   
   
 }
