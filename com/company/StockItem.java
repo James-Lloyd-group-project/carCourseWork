@@ -44,7 +44,7 @@ public void SetStockName(String newStockName) //sets stock name
     this.stockName = newStockName;
 }
 
-public String GetStockCode(){ //gets stock code
+public String getStockCode(){ //gets stock code
     if(stockCode==null){
         return("Unknown stock code");
     }
@@ -53,7 +53,7 @@ public String GetStockCode(){ //gets stock code
     }
 }
 
-public void SetStockCode(String newStockCode)  // sets stock code
+public void setStockCode(String newStockCode)  // sets stock code
 {
     this.stockCode = newStockCode;
 }

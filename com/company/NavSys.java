@@ -17,4 +17,12 @@ public class NavSys extends StockItem {
 
     public  String getLocationMethod(){ return locationMethod;}
 
+    public void SetStockCode(String newStockCode)  // sets stock code
+    {
+        String code = "n"+this.getStockCode();
+
+        this.setStockCode(code);
+    }
+
+
 }

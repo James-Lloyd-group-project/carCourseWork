@@ -11,6 +11,13 @@ public class HeadLights extends StockItem {
     private int colour;
     private int model;
 
+    public void SetStockCode(String newStockCode)  // sets stock code
+    {
+        String code = "h"+this.getStockCode();
+
+        this.setStockCode(code);
+    }
+
 
     public int getBrightness(){ return brightness;}
 

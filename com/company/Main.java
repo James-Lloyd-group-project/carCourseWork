@@ -1,8 +1,14 @@
 package com.company;
 import java.util.Scanner;
 import  java.io.FileWriter;
+import java.awt.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.*;
 
 public class Main {
+
+
 
     static Scanner input = new Scanner(System.in);
     static StockItem[] stockArray = new StockItem[1];
@@ -10,7 +16,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Welcome to our car part sale application");
-
         modeSelection();
     }
 
@@ -57,7 +62,7 @@ public class Main {
             int saleQuantity = input.nextInt();
 
             int newQuantity = stockArray[itemIndex].sellItem(saleQuantity);
-            System.out.println("You now have "+ newQuantity+ " of item "+ stockArray[itemIndex].GetStockCode() + " in stock");
+            System.out.println("You now have "+ newQuantity+ " of item "+ stockArray[itemIndex].getStockCode() + " in stock");
         }
     }
 
@@ -99,7 +104,7 @@ public class Main {
         int indexOfItem = 0;
 
         for (int i = 0 ; i < stockArray.length; i++) {
-            if (code.equals(stockArray[i].GetStockCode())){
+            if (code.equals(stockArray[i].getStockCode())){
                 indexOfItem = i;
             }
         }
@@ -128,7 +133,7 @@ public class Main {
 
         stockArray[itemsOfStock] = new StockItem(name,code,quantity,description,priceNoVat);
         ;
-        System.out.println("stock item: "+ stockArray[itemsOfStock].GetStockCode()+" has been created");
+        System.out.println("stock item: "+ stockArray[itemsOfStock].getStockCode()+" has been created");
 
         itemsOfStock++;
 

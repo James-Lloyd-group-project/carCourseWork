@@ -8,6 +8,13 @@ public class Brakes extends StockItem {
     private String brakedisks;
     private String brakepads;
 
+    public void SetStockCode(String newStockCode)  // sets stock code
+    {
+        String code = "b"+this.getStockCode();
+
+        this.setStockCode(code);
+    }
+
 
     public String getBrakeDisks(){return brakedisks;}
 
