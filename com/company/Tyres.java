@@ -9,7 +9,6 @@ public class Tyres extends StockItem {
     private double tyreModel;
     private double treadDepth;
 
-
     public double getTyreSize(){return tyreSize;}
 
     public void getTyreSize(int newTyreSize){this.tyreSize = newTyreSize;}

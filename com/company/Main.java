@@ -11,7 +11,12 @@ public class Main {
 
 
     static Scanner input = new Scanner(System.in);
-    static StockItem[] stockArray = new StockItem[1];
+
+    static HeadLights[] headLightsArray;
+    static Brakes[] brakesArray;
+    static NavSys[] navSysArray;
+    static Tyres[] tyreArray;
+
     static int modeSelected;
 
     public static void main(String[] args) {
@@ -61,8 +66,8 @@ public class Main {
 
             int saleQuantity = input.nextInt();
 
-            int newQuantity = stockArray[itemIndex].sellItem(saleQuantity);
-            System.out.println("You now have "+ newQuantity+ " of item "+ stockArray[itemIndex].getStockCode() + " in stock");
+            //int newQuantity = stockArray[itemIndex].sellItem(saleQuantity);
+            //System.out.println("You now have "+ newQuantity+ " of item "+ stockArray[itemIndex].getStockCode() + " in stock");
         }
     }
 
@@ -103,20 +108,22 @@ public class Main {
     static int findStockCode(String code){
         int indexOfItem = 0;
 
-        for (int i = 0 ; i < stockArray.length; i++) {
-            if (code.equals(stockArray[i].getStockCode())){
-                indexOfItem = i;
-            }
-        }
+        //for (int i = 0 ; i < stockArray.length; i++) {
+           // if (code.equals(stockArray[i].getStockCode())){
+              //  indexOfItem = i;
+            //}
+        //}
 
         return indexOfItem;
     }
 
     static void createStockItem(){
         int itemsOfStock = 0;
+        String stockType = "";
 
         System.out.println("What is the stock code of the new item?");
         String code= input.nextLine();
+
         code= input.nextLine();
         System.out.println("What is the stock name of the new item?");
         String name = input.nextLine();
@@ -131,9 +138,24 @@ public class Main {
             quantity = input.nextInt();
         }
 
-        stockArray[itemsOfStock] = new StockItem(name,code,quantity,description,priceNoVat);
-        ;
-        System.out.println("stock item: "+ stockArray[itemsOfStock].getStockCode()+" has been created");
+        if(code.toCharArray()[0]=='n'){
+
+        }
+
+        else if (code.toCharArray()[0]=='b'){
+
+        }
+
+        else if (code.toCharArray()[0]=='t'){
+
+        }
+
+        else if (code.toCharArray()[0]=='h'){
+
+        }
+
+
+       // System.out.println("stock item: "+ stockArray[itemsOfStock].getStockCode()+" has been created");
 
         itemsOfStock++;
 
@@ -151,9 +173,21 @@ public class Main {
     }
 
     static String continueUsingApp(){
-        System.out.println("Would you like to carry on?: Y/N");
-        String selection = input.next();
-        selection.toLowerCase();
+        boolean choiceSelected= false;
+        String selection ="";
+
+        while(!choiceSelected){
+            System.out.println("Would you like to carry on?: Y/N");
+            selection = input.nextLine();
+            selection.toLowerCase();
+            if (selection=="y"||selection=="n"){
+                choiceSelected=true;
+            }
+            else {
+                System.out.println("Invalid character detected");
+                System.out.println("Please enter either Y or N");
+            }
+        }
         return selection;
     }
 
