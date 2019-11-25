@@ -11,7 +11,7 @@ public class Tyres extends StockItem {
 
     public double getTyreSize(){return tyreSize;}
 
-    public void getTyreSize(int newTyreSize){this.tyreSize = newTyreSize;}
+    public void setTyreSize(int newTyreSize){this.tyreSize = newTyreSize;}
 
     public double getTyrePressure(){return tyrePressure;}
 
