@@ -7,7 +7,7 @@ public class Brakes extends StockItem {
 
     private String diskbrakes;
     private String brakepads;
-    private String brakecalipers;
+    private String calipers;
 
     public void SetStockCode(String newStockCode)  // sets stock code
     {
@@ -25,7 +25,7 @@ public class Brakes extends StockItem {
 
     public void setBrakePads(String newBrakePads){this.brakepads = newBrakePads;}
     
-    public void getBrakeCalipers(){return brakecalipers;}
+    public void getBrakeCalipers(){return calipers;}
     
-    public void setBrakeCalipers(String newBrakeCalipers){this.brakecalipers = newBrakeCalipers;}
+    public void setCalipers(String newCalipers){this.calipers = newCalipers;}
 }
