@@ -5,8 +5,9 @@ public class Brakes extends StockItem {
         super(name, code, quantity, description, priceNoVat);
     }
 
-    private String brakedisks;
+    private String diskbrakes;
     private String brakepads;
+    private String brakecalipers;
 
     public void SetStockCode(String newStockCode)  // sets stock code
     {
@@ -16,11 +17,15 @@ public class Brakes extends StockItem {
     }
 
 
-    public String getBrakeDisks(){return brakedisks;}
+    public String getDiskBrakes(){return diskbrakes;}
 
-    public void setBrakeDisks(String newBrakeDisks){this.brakedisks = newBrakeDisks;}
+    public void setBrakeDisks(String newDiskBrakes){this.diskbrakes = newDiskBrakes;}
 
     public String getBrakePads(){return brakepads;}
 
     public void setBrakePads(String newBrakePads){this.brakepads = newBrakePads;}
+    
+    public void getBrakeCalipers(){return brakecalipers;}
+    
+    public void setBrakeCalipers(String newBrakeCalipers){this.brakecalipers = newBrakeCalipers;}
 }
