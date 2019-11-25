@@ -25,7 +25,7 @@ public class Brakes extends StockItem {
 
     public void setBrakePads(String newBrakePads){this.brakepads = newBrakePads;}
     
-    public void getBrakeCalipers(){return calipers;}
+    public String getBrakeCalipers(){return calipers;}
     
     public void setCalipers(String newCalipers){this.calipers = newCalipers;}
 }
