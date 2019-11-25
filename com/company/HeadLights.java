@@ -27,7 +27,7 @@ public class HeadLights extends StockItem {
 
     public void setColour(int newColour){ this.colour = newColour;}
 
-    public int getShape(){return model;}
+    public int getModel(){return model;}
 
     public void setModel(int newModel){ this.model = newModel;}
 
