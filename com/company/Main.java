@@ -1,14 +1,10 @@
 package com.company;
+import javax.swing.*;
 import java.util.Scanner;
 import  java.io.FileWriter;
 import java.awt.*;
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.*;
 
 public class Main {
-
-
 
     static Scanner input = new Scanner(System.in);
 
@@ -20,10 +16,12 @@ public class Main {
     static int modeSelected;
 
     public static void main(String[] args) {
+        Menu menu = new Menu();
         System.out.println("Welcome to our car part sale application");
         modeSelection();
     }
 
+    //function that gets the user input for what made they want to be using
     public static void modeSelection(){
 
         System.out.println("Enter 1 for sales");
@@ -35,6 +33,7 @@ public class Main {
         menuSelection();
     }
 
+    //function that sends the user to the right mode
     static void menuSelection(){
         switch (modeSelected){
             case 1:
@@ -49,6 +48,7 @@ public class Main {
         }
     }
 
+    //code for the sales mode
     static void salesMode(){
         int indexOfStock = -1;
 
@@ -71,6 +71,7 @@ public class Main {
         }
     }
 
+    //code for ordering mode (not yet finished)
     static void orderingMode(){
         System.out.println("Entering ordering mode");
     }
