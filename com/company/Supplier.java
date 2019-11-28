@@ -8,6 +8,13 @@ public class Supplier {
     private ContactInformation supplierContactInfo;
     private Address supplierAddress;
 
+    public Supplier(String ID, String name, ContactInformation contactInfo, Address supaddress){
+        this.supplierID = ID;
+        this.supplierName = name;
+        this.supplierContactInfo = contactInfo;
+        this.supplierAddress = supaddress;
+    }
+
     public Address getSupplierAddress() {
         return supplierAddress;
     }

@@ -3,8 +3,14 @@ package com.company;
 public class Order {
 
     private String orderID;
-    private StockItem stockItem;
+    private String stockID;
     private Customer customer;
+
+    public Order(String id, String stockIdNum, Customer customer1){
+        this.customer = customer1;
+        this.stockID = stockIdNum;
+        this.orderID = id;
+    }
 
     public Customer getCustomer() {
         return customer;
@@ -14,8 +20,8 @@ public class Order {
         this.customer = customer;
     }
 
-    public StockItem getStockItem() {
-        return stockItem;
+    public String getStockItem() {
+        return stockID;
     }
 
     public void setOrderID(String orderID) {
@@ -26,7 +32,7 @@ public class Order {
         return orderID;
     }
 
-    public void setStockItem(StockItem stockItem) {
-        this.stockItem = stockItem;
+    public void setStockItem(String stockItem) {
+        this.stockID = stockItem;
     }
 }
