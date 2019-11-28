@@ -33,13 +33,19 @@ public class Menu extends Frame {
         stockManagement.setLocation(850,700);
         stockManagement.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println();
+
             }
         });
 
-        this.add(salesButton);
-        this.add(orderingButton);
-        this.add(stockManagement);
+        Panel menu = new Panel();
+
+        menu.setSize(1920,1080);
+        this.add(menu);
+        menu.setLayout(null);
+
+        menu.add(salesButton);
+        menu.add(orderingButton);
+        menu.add(stockManagement);
 
         this.setVisible(true);
     }
