@@ -102,6 +102,21 @@ public class Menu extends Frame {
             }
         });
 
+        //styling objects for selling stock screen
+        stockCodeSale.setSize(50,50);
+        stockCodeSale.setLocation(800,400);
+
+        quantityToSell.setSize(50,50);
+        quantityToSell.setLocation(850,400);
+
+        sellStock.setSize(200,100);
+        sellStock.setLocation(800,500);
+        sellStock.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
         menu.setSize(1920,1080);
         this.add(menu);
         menu.setLayout(null);
