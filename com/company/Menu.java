@@ -7,11 +7,22 @@ import java.awt.event.ActionListener;
 public class Menu extends Frame {
     Menu(){
 
+        //panels for storing each of the different screens of the application
+        Panel menu = new Panel();
+        Panel orderingScreen = new Panel();
+        Panel salesScreen = new Panel();
+        Panel stockManagementScreen = new Panel();
+
         setSize(1920,1080);
 
+        //declaring the buttons for the menu screen
         Button salesButton = new Button("Sales");
         Button orderingButton = new Button("Ordering");
         Button stockManagement = new Button("Stock management");
+
+        //declaring the gui objects for the ordering screen
+        TextArea stockCodeFinder = new TextArea();
+
 
         salesButton.setSize(200,100);
         salesButton.setLocation(850,300);
@@ -37,7 +48,7 @@ public class Menu extends Frame {
             }
         });
 
-        Panel menu = new Panel();
+
 
         menu.setSize(1920,1080);
         this.add(menu);
