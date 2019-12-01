@@ -119,6 +119,27 @@ public class Menu extends Frame {
 
         menu.setSize(1920,1080);
         this.add(menu);
+
+        orderingScreen.setSize(1920,1080);
+        this.add(orderingScreen);
+        orderingScreen.setVisible(false);
+
+        salesScreen.setSize(1920,1080);
+        this.add(salesScreen);
+        salesScreen.setVisible(false);
+
+        stockManagement.setSize(1920,1080);
+        this.add(stockManagementScreen);
+        stockManagementScreen.setVisible(false);
+
+        addNewStkItm.setSize(1920,1080);
+        this.add(addNewStkItm);
+        addNewStkItm.setVisible(false);
+
+        modifyCurrentStk.setSize(1920,1080);
+        this.add(modifyCurrentStk);
+        modifyCurrentStk.setVisible(false);
+
         menu.setLayout(null);
 
         menu.add(salesButton);
