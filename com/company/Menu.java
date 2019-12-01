@@ -146,6 +146,16 @@ public class Menu extends Frame {
         menu.add(orderingButton);
         menu.add(stockManagement);
 
+        orderingScreen.setLayout(null);
+        orderingScreen.add(orderStock);
+        orderingScreen.add(stockCodeFinder);
+        orderingScreen.add(quantityToOrder);
+
+        salesScreen.setLayout(null);
+        salesScreen.add(stockCodeSale);
+        salesScreen.add(quantityToSell);
+        salesScreen.add(sellStock);
+
         this.setVisible(true);
     }
 
