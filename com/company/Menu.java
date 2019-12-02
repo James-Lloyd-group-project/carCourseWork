@@ -14,6 +14,9 @@ public class Menu extends Frame {
         Panel stockManagementScreen = new Panel();
         Panel addNewStkItm = new Panel();
         Panel modifyCurrentStk = new Panel();
+        Panel supplierContactInfo = new Panel();
+
+        this.setTitle("car rental application");
 
         setSize(1920,1080);
 
@@ -21,6 +24,11 @@ public class Menu extends Frame {
         Button salesButton = new Button("Sales");
         Button orderingButton = new Button("Ordering");
         Button stockManagement = new Button("Stock management");
+
+        Button navSys = new Button();
+        Button tyres = new Button();
+        Button headlights = new Button();
+        Button brakes = new Button();
 
         //declaring the gui objects for the ordering screen
         TextArea stockCodeFinder = new TextArea();
@@ -159,6 +167,9 @@ public class Menu extends Frame {
         stockManagementScreen.setLayout(null);
         stockManagementScreen.add(edit);
         stockManagementScreen.add(addStockItem);
+
+        addNewStkItm.setLayout(null);
+
 
         this.setVisible(true);
     }
