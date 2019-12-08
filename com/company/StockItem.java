@@ -30,7 +30,7 @@ public StockItem(String name,String code, int quantity, String description,float
 }
 
         
-public String GetStockName(){ //gets stock name
+public String getStockName(){ //gets stock name
     if(stockName==null){
         return("Unknown stock name");
     }
